@@ -1,0 +1,48 @@
+# 슬라이딩 설정 (대부분 /슬라이딩설정 명령어로 게임 안에서 바꿀 수 있습니다)
+
+# 슬라이딩 기능 전체 켜기/끄기
+enabled: true
+
+# 슬라이딩 발동 조건 (Shift 연타)
+trigger:
+  # Shift를 몇 번 눌러야 발동하는지 (2 = 더블탭)
+  taps: 2
+  # 이 시간(ms) 안에 위 횟수만큼 눌러야 발동
+  window-ms: 400
+
+slide:
+  # 기본 슬라이딩 거리 (블록). 연타 보너스가 없을 때의 대략적인 이동 거리
+  distance: 8.0
+  # 틱마다 속도가 유지되는 비율. 클수록 더 미끄러짐 (0.80 ~ 0.98)
+  friction: 0.93
+  # 슬라이딩 최대 지속 시간 (틱, 20틱 = 1초)
+  max-ticks: 80
+  # 이 속도(블록/틱) 아래로 느려지면 슬라이딩 종료
+  min-speed: 0.06
+  # 슬라이딩이 끝난 뒤 다시 쓸 수 있을 때까지의 대기 시간 (초)
+  cooldown-seconds: 3.0
+  # 슬라이딩 중 점프 막기
+  prevent-jump: true
+  # 슬라이딩 중 다른 플레이어에게 눕는 자세로 보이게 하기
+  pose: true
+
+# 슬라이딩 중 스페이스바 연타
+mash:
+  enabled: true
+  # 연타 속도를 계산하는 최근 시간 (ms)
+  window-ms: 1000
+  # 초당 이 횟수 이상 누르면 보너스가 최대
+  full-cps: 8.0
+  # 최대 연타 시 거리가 늘어나는 배율 (2.0 = 최대 2배)
+  max-multiplier: 2.0
+
+# 슬라이딩이 끝난 뒤 느려지는 효과
+after:
+  # 구속 단계 (0 = 느려지지 않음, 1~10)
+  slowness-level: 2
+  # 느려지는 시간 (초)
+  slowness-seconds: 2.0
+
+effects:
+  particles: true
+  sound: true
